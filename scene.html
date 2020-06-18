@@ -7,24 +7,24 @@
     <!-- <script src="marmoset.js"></script> -->
     <script>
         /*
-                                                                                                                                                        (Built: Tue, Jun 25, 2019  7:21:34 PM)
-                                                                                                                                                        Marmoset Viewer Code and Tools
+                                                                                                                                                                (Built: Tue, Jun 25, 2019  7:21:34 PM)
+                                                                                                                                                                Marmoset Viewer Code and Tools
 
-                                                                                                                                                        Copyright (c) Marmoset LLC.
-                                                                                                                                                        All rights reserved.
+                                                                                                                                                                Copyright (c) Marmoset LLC.
+                                                                                                                                                                All rights reserved.
 
-                                                                                                                                                        Redistribution and use of this software are permitted provided
-                                                                                                                                                        that the software remains whole and unmodified and this copyright
-                                                                                                                                                        notice remains attached. Use or inclusion of any portion of this
-                                                                                                                                                        code in other software programs is prohibited, excepting simple
-                                                                                                                                                        embedding of this file in web applications. This software, or any
-                                                                                                                                                        derivatives thereof, may not be resold, rented, leased, or
-                                                                                                                                                        distributed on any other for-charge basis.
+                                                                                                                                                                Redistribution and use of this software are permitted provided
+                                                                                                                                                                that the software remains whole and unmodified and this copyright
+                                                                                                                                                                notice remains attached. Use or inclusion of any portion of this
+                                                                                                                                                                code in other software programs is prohibited, excepting simple
+                                                                                                                                                                embedding of this file in web applications. This software, or any
+                                                                                                                                                                derivatives thereof, may not be resold, rented, leased, or
+                                                                                                                                                                distributed on any other for-charge basis.
 
-                                                                                                                                                        THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR
-                                                                                                                                                        IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
-                                                                                                                                                        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-                                                                                                                                                        */
+                                                                                                                                                                THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR
+                                                                                                                                                                IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+                                                                                                                                                                WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+                                                                                                                                                                */
         marmoset = {};
         (function(marmoset) {
             "use strict";
@@ -7419,7 +7419,7 @@
 </head>
 
 <body>
-    <!-- <input type="file" id="file" onchange="getSource()" />
+    <input type="file" id="file" onchange="getSource()" />
     <script>
         function getSource() {
             var resultFile = document.getElementById("file").files[0];
@@ -7437,49 +7437,8 @@
                     });
                 };
             }
-        }
-    </script> -->
-    <button onclick="fetchData()">fetch remote source</button>
-    <script>
-        function fetchData() {
-            fetch("https://raw.githubusercontent.com/ChenYCL/marmoset-picker/master/scene.mview", {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                    },
-                })
-                .then((response) => response.blob())
-                .then((myBlob) => {
-                    var objectURL = URL.createObjectURL(myBlob);
-                    marmoset.embed(objectURL, {
-                        width: 800,
-                        height: 600,
-                        autoStart: true,
-                        fullFrame: true,
-                        pagePreset: false,
-                    });
-                });
         }
     </script>
-    <!-- <script>
-        function getSource() {
-            var resultFile = document.getElementById("file").files[0];
-            if (resultFile) {
-                var reader = new FileReader();
-                reader.readAsDataURL(resultFile);
-                reader.onload = function(e) {
-                    var urlData = this.result;
-                    marmoset.embed(urlData, {
-                        width: 800,
-                        height: 600,
-                        autoStart: true,
-                        fullFrame: true,
-                        pagePreset: false,
-                    });
-                };
-            }
-        }
-    </script> -->
 </body>
 
 </html>
